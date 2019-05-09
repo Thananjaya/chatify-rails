@@ -1,0 +1,2 @@
+class Userscontroller < ActiveRecord
+end
