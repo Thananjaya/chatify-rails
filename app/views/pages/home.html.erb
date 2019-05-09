@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="jumbotron">
+	<h3 style="text-align: center">Chatify</h3>
+	<div class="message-box" id="msg-box" style="height: 350px; border: solid 1px black; overflow-y: scroll;">
+		<% @messages.each do |message| %>
+			<%= render "messages/message", message: message %>
+		<% end %>
+	</div>
+	<%= simple_form_for @message do |f| %>
+		<div class="form-inputs" style="margin: 25px;">
+			<%= f.input :body, placeholder: 'Type Something ..', label: false, class: 'form-control' %>
+		</div>
+		<div class="form-actions">	
+			<center><%= f.submit "Send", class: "btn btn-md btn-success" %></center>
+		</div>
+	<% end %>
+</div>
