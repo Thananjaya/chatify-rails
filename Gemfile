@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gems for styles
 gem 'simple_form'
 gem 'bootstrap'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'tether-rails'
 
 #gems for user sessions
